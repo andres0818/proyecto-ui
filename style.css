@@ -41,6 +41,8 @@ body {
     border: none; 
     margin-bottom: 15px;
     cursor: pointer;
+    text-decoration: none;
+    text-align: center;
 }
 
 .boton:hover {

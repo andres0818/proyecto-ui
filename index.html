@@ -18,12 +18,13 @@
     <main class="container-login">
         <article class="contenedor-formulario-login">
             <h1 class="titulo-login">Leanovid</h1>
-            <button id="btn-registrar" class="boton" style="background-color: #0A3F3B;">
-                Registrarse
-            </button>
-            <button id="btn-iniciar-sesion" class="boton" style="background-color: #3a49ac;">
-                Iniciar sesión
-            </button>
+
+            <a href="javascript:" data-show="registrarse" class="boton"
+                style="background-color: #0A3F3B;">Registrarse</a>
+
+            <a href="javascript:" data-show="iniciar-sesion" class="boton" style="background-color: #3a49ac;">Iniciar
+                sesión</a>
+
             <p style="font-size: 12px;">
                 Al registrarse acepta los terminos y condiciones.
             </p>
@@ -43,6 +44,9 @@
 
     <dialog id="iniciar-sesion">
         <h1>iniciar sesion</h1>
+        <a href="javascript:" data-hidde="iniciar-sesion" class="boton" style="background-color: #3a49ac;">Cancelar</a>
+        <button id="cancelar-iniciar-sesion">Cancelar</button>
+        <button id="aceptar-iniciar-sesion">Aceptar</button>
     </dialog>
 
     <script src="script.js"></script>

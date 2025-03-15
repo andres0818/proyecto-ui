@@ -1,10 +1,22 @@
-let btnRegistrarse = document.querySelector("#btn-registrar")
-let btnIiciarSesion = document.querySelector("#btn-iniciar-sesion")
 
-btnRegistrarse.addEventListener("click", ()=>{
-    document.querySelector("#registrarse").showModal()
-})
+document.addEventListener("DOMContentLoaded", (event) => {
+    console.log("DOM fully loaded and parsed");
+    Init()
+});
 
-btnIiciarSesion.addEventListener("click", ()=>{
-    document.querySelector("#iniciar-sesion").showModal()
-})
+function Init(){
+    const actionModal = document.querySelectorAll("a");
+
+    actionModal.forEach(e => {
+        e.addEventListener("click", e => {
+
+            if(e.target.dataset.show){
+                document.querySelector(`#${e.target.dataset.show}`).showModal()
+            }
+            else if(e.target.dataset.hidde){
+                document.querySelector(`#${e.target.dataset.hidde}`).close();
+            }
+        })
+    });
+}
+
