@@ -19,10 +19,11 @@
         <article class="contenedor-formulario-login">
             <h1 class="titulo-login">Leanovid</h1>
 
-            <a href="javascript:" data-show="registrarse" class="boton"
+            <a href="javascript:void(0)" data-show="registrarse" class="boton"
                 style="background-color: #0A3F3B;">Registrarse</a>
 
-            <a href="javascript:" data-show="iniciar-sesion" class="boton" style="background-color: #3a49ac;">Iniciar
+            <a href="javascript:void(0)" data-show="iniciar-sesion" class="boton"
+                style="background-color: #3a49ac;">Iniciar
                 sesión</a>
 
             <p style="font-size: 12px;">
@@ -42,11 +43,15 @@
             assumenda neque!</p>
     </dialog>
 
-    <dialog id="iniciar-sesion">
-        <h1>iniciar sesion</h1>
-        <a href="javascript:" data-hidde="iniciar-sesion" class="boton" style="background-color: #3a49ac;">Cancelar</a>
-        <button id="cancelar-iniciar-sesion">Cancelar</button>
-        <button id="aceptar-iniciar-sesion">Aceptar</button>
+    <dialog class="form-iniciar-sesion" id="iniciar-sesion">
+        <form action="">
+            <h2 class="iniciar-sesion-titulo">Iniciar sesion</h2>
+            <input placeholder="Correo" type="email" class="texto-formulario" required>
+            <input placeholder="Contraseña" type="password" class="texto-formulario" required>
+            <a href="javascript:void(0)" data-hidde="iniciar-sesion" class="boton"
+                style="background-color: var(--rojo); padding: 10px 30px;">Cancelar</a>
+            <button class="boton aceptar" style="background-color: var(--azul);" type="submit">Aceptar</button>
+        </form>
     </dialog>
 
     <script src="script.js"></script>
