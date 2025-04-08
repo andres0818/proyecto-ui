@@ -4,6 +4,20 @@
     --rojo: #d72004;
 }
 
+.form label, .form input, .form button{
+    display:block;   
+    margin: 10px auto;
+}
+
+
+.form button {
+    margin-top: 10px;
+}
+
+.form label, .form input{
+    padding-right: 30px;
+}
+
 body {
     margin: 0 auto;
     padding: 0;
@@ -55,6 +69,14 @@ body {
     box-shadow: 0 0 6px 2px #999999ba;
 }
 
+.boton-cancelar {
+    background-color: #d72004;
+}
+
+.boton-aceptar{
+    background-color: #0A3F3B;
+}
+
 .fondo-login {
     width: 50dvw;
     height: 100vh;
@@ -72,20 +94,21 @@ body {
 dialog{
     border: none;
     box-shadow: 0 0 6px 2px #99999957;
+    text-align: center;
 }
 
-.form-iniciar-sesion form {
+dialog form {
     display: block;
     margin: 0 auto;
     text-align: center;
 }
 
-.form-iniciar-sesion form label, .form-iniciar-sesion form input {
+dialog form label, dialog form input {
     display: block;
     margin: 10px;
 }
 
-.form-iniciar-sesion form input {
+dialog form input {
     padding: 5px 10px;
     width: 300px;
 }

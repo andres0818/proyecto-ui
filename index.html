@@ -35,16 +35,26 @@
         </figure>
     </main>
 
-
-    <dialog id="registrarse">
-        <h1>Registrarse</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae quos molestiae a commodi aliquam
-            accusantium reiciendis atque non quae placeat cum incidunt labore, quaerat maiores hic? Repellat fugit
-            assumenda neque!</p>
+    <dialog id="registrarse" style="padding-bottom: 27px;">
+        <form action="elementosDisponibles.html" class="form">
+            <h2>Registrarse</h2>
+            <input type="text" name="nombres" placeholder="Nombres" required>
+            <input type="text" name="apellidos" placeholder="Apellidos" required>
+            <label for="email"></label>
+            <input type="email" name="Correo" id="" placeholder="Correo" required>
+            <label for="number"></label>
+            <input type="tel" name="Celular" id="" placeholder="Celular" required>
+            <input type="text" name="Identificacion" placeholder="Identificacion" required>
+            <input type="password" name="Contraseña" placeholder="Contraseña" required>
+            <button class="boton aceptar" style="background-color: var(--verde); margin-bottom: 20px;"
+                type="submit">Aceptar</button>
+            <a href="javascript:void(0)" data-hidde="registrarse" class="boton"
+                style="background-color: var(--rojo); padding: 8px 54px; margin-bottom: 60px;">Cancelar</a>
+        </form>
     </dialog>
 
     <dialog class="form-iniciar-sesion" id="iniciar-sesion">
-        <form action="">
+        <form action="elementosDisponibles.html">
             <h2 class="iniciar-sesion-titulo">Iniciar sesion</h2>
             <input placeholder="Correo" type="email" class="texto-formulario" required>
             <input placeholder="Contraseña" type="password" class="texto-formulario" required>
