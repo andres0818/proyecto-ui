@@ -1,43 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Perfil</title>
+
+    <link href="https://unpkg.com/ionicons@3.0.0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Styles/perfilUsuario.css">
+    <script src="js/perfilUsuario.js"></script>
 </head>
 
 <body>
-
-    <main>
-        <section>
-            <a href="editarUsuario.html">Editar perfil</a>
-            <a href="registrarElemento.html">Registrar elemento</a>
-            <figure>
-                <img src="data:image/jpeg;base64,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"
-                    alt="">
-            </figure>
-            <table>
-                <tbody>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Documento</th>
-                        <th>Email</th>
-                        <th>Telefono</th>
-                        <th>Tipo</th>
-                    </tr>
-                    <tr>
-                        <td>Alejandra</td>
-                        <td>123456789</td>
-                        <td>aleja@gmai.com</td>
-                        <td>+57 300 1234567</td>
-                        <td>Estudiante</td>
-                    </tr>
-                </tbody>
-            </table>
+    <main class="main-container">
+        <section class="left-sidebar">
+            <div class="inner">
+                <div class="user-profile">
+                    <figure class="user-image">
+                        <img src="https://gravatar.com/avatar/de84db04b0c7b43efdc840391ffe56ff">
+                    </figure>
+                    <div class="user-info">
+                        <p class="user-name">Daniela Desira</p>
+                        <p class="user-title">Front End Developer</p>
+                        <p class="user-location">
+                            <i class="icon ion-md-locate"></i> Bello
+                        </p>
+                    </div>
+                </div>
+                <nav class="main-menu">
+                    <p title="Editar perfil">
+                        <i class="icon ion-md-create"></i>
+                        <a href="editarUsuario.html">Editar Perfil</a>
+                    </p>
+                    <p title="Registrar libro">
+                        <i class="icon ion-md-book"></i>
+                        <a href="registrarElemento.html?libros=true">Registrar libro</a>
+                    </p>
+                    <p title="Registrar Dispositivo">
+                        <i class="icon ion-md-desktop"></i>
+                        <a href="registrarElemento.html?dispositivos=true">Registrar Dispositivo</a>
+                    </p>
+                </nav>
+            </div>
+            <div class="toggle-button"><i class="icon ion-md-arrow-dropleft"></i></div>
         </section>
     </main>
-
 </body>
 
 </html>
