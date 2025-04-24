@@ -1,84 +1,301 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elementos</title>
+    <style>
+    * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+
+    body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+    }
+
+    .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    }
+
+    .busqueda-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #3a49ac;
+    padding: 5px 5px;
+    }
+
+    .search-input {
+    padding: 10px 15px;
+    width: 300px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    }
+
+    .contenedor-boton {
+    margin-top: 20px;
+    }
+
+    .boton-buscar {
+    background-color: #3a49ac;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    }
+
+    .layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    }
+
+    .filtros {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 200px;
+    }
+
+    .switch-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    }
+
+    .switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+    }
+
+    .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    }
+
+    .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 24px;
+    }
+
+    .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+    }
+
+    .switch input:checked + .slider {
+    background-color: #3a49ac;
+    }
+
+    .switch input:checked + .slider:before {
+    transform: translateX(26px);
+    }
+
+    .contenido {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    justify-content: center;
+    flex: 1;
+    }
+
+    .card {
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    max-width: 600px;
+    margin: 0 auto;
+    align-items: flex-start;
+    }
+
+    .card:hover {
+    transform: translateY(-5px);
+    }
+
+    .card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-right: 1px solid #eee;
+    }
+
+    .card-content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    }
+
+    .card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px 0;
+    }
+
+    .card ul li {
+    margin-bottom: 6px;
+    font-size: 14px;
+    }
+
+    .card p {
+    font-size: 13px;
+    line-height: 1.4;
+    color: #333;
+    white-space: normal;
+    overflow: visible;
+    }
+
+    a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    width: 100%;
+    }
+    </style>
 </head>
 
 <body>
 
-    <main>
-        <nav>
-            <form action="\">
-                <input type="search" name="" id="" placeholder="Ingresa el nombre del elemento">
-                <select name="" id="">
-                    <option value="">Selecciones una categoria</option>
-                    <option value="Computadoras">Computadoras</option>
-                    <option value="Tablets">Tablets</option>
-                    <option value="Libros">Libros</option>
-                </select>
-                <select name="" id="">
-                    <option value="">Selecciones una gama</option>
-                    <option value="baja">Baja</option>
-                    <option value="media">Media</option>
-                    <option value="alta">Alta</option>
-                </select>
-                <button type="submit">Buscar</button>
-            </form>
-        </nav>
+    <div class="header">
+    <div class="busqueda-container">
+    <img src="Elementos/libro.svg" alt="login" width="30px" />
+    <input type="text" class="search-input" placeholder="Buscar libro, computador o tablet..." />
+    </div>
+    <div class="contenedor-boton">
+    <button class="boton-buscar">Nuevo elemento</button>
+    </div>
+</div>
 
-        <section>
-            <a href="reservarElemlento.html">
-                <figure>
-                    <img width="200px"
-                        src="https://png.pngtree.com/png-clipart/20200701/original/pngtree-computer-vector-illustration-in-cartoon-style-png-image_5392505.jpg"
-                        alt="Computador" srcset="">
-                </figure>
-                <ul>
-                    <li>Marca: dell</li>
-                    <li>RAM: 8GB</li>
-                    <li>Procesador: Core i5s</li>
-                    <li>Pantalla 17'</li>
-                    <li>Computador portatil</li>
-                </ul>
-            </a>
-        </section>
+<div class="layout">
+    <aside class="filtros">
+    <label class="switch-label">
+        <div class="switch">
+        <input type="checkbox" class="filtro" data-categoria="computadora" checked>
+        <span class="slider"></span>
+        </div>
+        Computadoras
+    </label>
 
-        <section>
-            <a href="reservarElemlento.html">
-                <figure>
-                    <img width="200px"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt_arQ5JdH0qUXWnoDfM3hYpYowRgfDTmFrA&s"
-                        alt="Computador" srcset="">
-                </figure>
-                <ul>
-                    <li>Marca: sunsui</li>
-                    <li>RAM: 8GB</li>
-                    <li>Pantalla 17'</li>
-                    <li>Computador portatil</li>
-                </ul>
-            </a>
+    <label class="switch-label">
+        <div class="switch">
+        <input type="checkbox" class="filtro" data-categoria="tablet" checked>
+        <span class="slider"></span>
+        </div>
+        Tablets
+    </label>
 
-        </section>
+    <label class="switch-label">
+        <div class="switch">
+        <input type="checkbox" class="filtro" data-categoria="libro" checked>
+        <span class="slider"></span>
+        </div>
+        Libros
+    </label>
+    </aside>
 
-        <section>
-            <a href="reservarElemlento.html">
-                <figure>
-                    <img width="200px"
-                        src="https://e7.pngegg.com/pngimages/1002/480/png-clipart-book-cartoon-computer-file-book-comics-rectangle.png"
-                        alt="Computador" srcset="">
-                </figure>
-                <ul>
-                    <li>Nombre: Hábitos Atómicos</li>
-                    <li>Autor: James Clear</li>
-                    <li>Género: Libro de autoayuda</li>
-                </ul>
-            </a>
-        </section>
-    </main>
+    <div class="contenido">
+    <div class="card computadora">
+        <a href="reservarElemento.html">
+        <img src="images/computador.png" alt="Computador ASUS">
+        <div class="card-content">
+            <ul>
+            <li><strong>Nombre:</strong> ASUS Vivobook</li>
+            <li><strong>Sistema:</strong> Windows 11</li>
+            <li><strong>Disco:</strong> 512 GB SSD</li>
+            <li><strong>Tipo:</strong> Computador portátil</li>
+            </ul>
+            <p>Eficiencia, velocidad, comodidad y equilibrio perfecto. Con un diseño elegante, batería de larga duración y tecnología avanzada, el ASUS Vivobook está hecho para acompañarte en cada reto.</p>
+        </div>
+        </a>
+        </div>
 
+        <div class="card libro">
+        <a href="reservarElemento.html">
+        <img src="images/41-+g1a2Y1L._SX258_BO1,204,203,200_.jpg" alt="Libro codigo limpio">
+        <div class="card-content">
+            <ul>
+            <li><strong>Nombre:</strong> Código Limpio</li>
+            <li><strong>Autor:</strong> Robert C. Martin</li>
+            <li><strong>Género:</strong> Filosofía de programación</li>
+            </ul>
+            <p>Es un libro de Robert C. Martin que enseña principios y buenas prácticas para escribir código claro, legible y fácil de mantener, promoviendo una programación profesional y eficiente.</p>
+        </div>
+        </a>
+        </div>
+
+        <div class="card tablet">
+        <a href="reservarElemento.html">
+        <img src="images/Tablet-LENOVO-M11-1095-Pulgadas-Wifi-128-GB-8-GB-RAM-Seafoam-Green-3487690_a.webp" alt="Tablet Lenovo">
+        <div class="card-content">
+            <ul>
+            <li><strong>Marca:</strong> Lenovo</li>
+            <li><strong>RAM:</strong> 8GB</li>
+            <li><strong>Incluye:</strong> Lápiz y tablet de 10.9"</li>
+            <li><strong>Tipo:</strong> Portátil</li>
+            </ul>
+            <p>Tablet con lápiz. Precisión y comodidad. Ideal para estudiantes, profesores y profesionales en movimiento.</p>
+            </div>
+        </a>
+        </div>
+
+        <div class="card libro">
+        <a href="reservarElemento.html">
+        <img src="images/cien años de soledad.webp" alt="Libro cien años de soledad">
+        <div class="card-content">
+            <ul>
+            <li><strong>Nombre:</strong> Cien años de soledad</li>
+            <li><strong>Autor:</strong> Gabriel García Márquez</li>
+            <li><strong>Género:</strong> Literario</li>
+            </ul>
+            <p>Una obra maestra del realismo mágico, explora temas como la soledad, el destino, el amor, la guerra y la maldición que afecta a los Buendía por casarse entre parientes.</p>
+            </div>
+        </a>
+        </div>
+        </div>
+        </div>
+
+    <script>
+    const switches = document.querySelectorAll('.filtro');
+    switches.forEach(switchInput => {
+    switchInput.addEventListener('change', () => {
+        const categoria = switchInput.dataset.categoria;
+        const cards = document.querySelectorAll(`.card.${categoria}`);
+        cards.forEach(card => {
+        card.style.display = switchInput.checked ? 'flex' : 'none';
+        });
+    });
+    });
+</script>
 </body>
-
 </html>
